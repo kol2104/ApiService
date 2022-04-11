@@ -59,6 +59,6 @@ public class UserController {
 
     @ExceptionHandler({ConnectException.class})
     public ResponseEntity handleException(ConnectException exception) {
-        return new ResponseEntity(new UserServiceUnavailable().getMessage(), HttpStatus.NOT_FOUND);
+        return new ResponseEntity(new UserServiceUnavailable().getMessage(), HttpStatus.SERVICE_UNAVAILABLE);
     }
 }
